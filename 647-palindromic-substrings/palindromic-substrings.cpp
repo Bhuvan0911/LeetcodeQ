@@ -17,11 +17,11 @@ public:
         int count = 0;
         int n = s.length();
             
-        for(int i=0;i<n;i++){
-            int oddkaans = expandaroundindex(s,i,i);
+        for(int center=0;center<n;center++){
+            int oddkaans = expandaroundindex(s,center,center);
             count += oddkaans;
             
-            int evenkaans = expandaroundindex(s,i,i+1);
+            int evenkaans = expandaroundindex(s,center,center+1);
             count += evenkaans;
         }
         return count;
